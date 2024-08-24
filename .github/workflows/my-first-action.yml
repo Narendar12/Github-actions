@@ -1,21 +1,23 @@
-name: my first github action
-
+name: mt first github action
 on:
  push:
   branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+ build:
+  runs-on: ubuntu-latest
+
+  steps:
+  - uses: actions/checkout@v4
+  - name: provide permission to file
+    working-directory: /examples/src
+    run: chmod +x my_script.sh
+  - name: execute shell script
+    working-directory: /examples/src
+    run: ./my_script.sh
+
     
-    steps:
-    - uses: actions/checkout@v3
-    - name: provide access to script
-      working-directory: examples/src
-      run: chmod +x my_script.sh
-    - name: to run the script
-      working-directory: examples/src
-      run: ./my_script.sh
+  
 
   
 
