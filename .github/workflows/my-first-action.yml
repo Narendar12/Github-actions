@@ -3,8 +3,8 @@ name: my first github action
 On:[push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+ build:
+  runs-on: ubuntu-latest
 
   
 
