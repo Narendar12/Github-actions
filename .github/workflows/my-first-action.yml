@@ -1,11 +1,16 @@
-name: my first github action
+name: my first github action 
 
-On: [push]
+On:[push]
 
 jobs:
  build:
   runs-on: ubuntu-latest
 
+  strategy:
+   matrix:
+    python-version: [3.8,3.9]
+
+    
   
 
     
