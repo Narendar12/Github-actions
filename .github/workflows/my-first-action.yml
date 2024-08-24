@@ -8,7 +8,7 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - run: my_script.sh
+   - run: ./my_script.sh
 
   
 
