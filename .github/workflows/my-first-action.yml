@@ -32,7 +32,7 @@ jobs:
 
   - name: run tests
     run: |
-     cd src
+     cd examples/src
      python3 my-python-func.py
 
   
