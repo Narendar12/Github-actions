@@ -4,6 +4,9 @@ def addition(a,b):
 def subtraction(a,b):
   return a - b
 
-addition(4,5)
-subtraction(10,5)
+add = addition(4,5)
+print(add)
+sub =  subtraction(10,5)
+print(sub)
+
   
