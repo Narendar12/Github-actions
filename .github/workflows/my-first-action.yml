@@ -21,7 +21,7 @@ jobs:
     run: ./my_script.sh
 
   - name: run python script
-    uses: action/setup-python@v2
+    uses: action/setup-python@v3
     with:
      python-version: ${{ matrix.python-version }}
 
