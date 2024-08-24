@@ -7,8 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-      - run: ./my_script.sh
+    - uses: actions/checkout@v3
+    - name: to run the script
+      run: ./my_script.sh
 
   
 
