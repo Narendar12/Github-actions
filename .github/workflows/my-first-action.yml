@@ -1,4 +1,4 @@
-name: mt first github action
+name: this is my first github action file
 on:
  push:
   branches: [ "main" ]
@@ -9,47 +9,36 @@ jobs:
 
   strategy:
    matrix:
-    python-version: [3.8, 3.9]
-
+    python-version: [3.8,3.9]
+    
   steps:
   - uses: actions/checkout@v4
-  - name: provide permission to file
+  - name: provide access to shell script file
     working-directory: examples/src
     run: chmod +x my_script.sh
   - name: execute shell script
     working-directory: examples/src
     run: ./my_script.sh
-
-  - name: run python script
+  - name: setup python version
     uses: actions/setup-python@v3
     with:
      python-version: ${{ matrix.python-version }}
 
-  - name: install dependencies
+  - name: install pyhton dependencies
     run: |
      python -m pip install --upgrade pip
      pip install pytest
 
-  - name: run tests
-    run: |
-     cd examples/src
-     python3 my-python-func.py
-
-  
-
-    
-  
-
-  
+  - name: run python script
+    working-directory: examples/src
+    run: python3 my-python-func.py
+     
+ 
+ 
+     
 
     
-  
-
     
-
-
-
+   
   
-
-
-
+    
