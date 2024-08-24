@@ -1,14 +1,16 @@
-name: my first github action 
+name: my first github action
 
-On:[push]
+on:
+ push:
+  branches: [ "main" ]
 
 jobs:
  build:
   runs-on: ubuntu-latest
+  steps:
+   - run: ./my_script.sh
 
-  strategy:
-   matrix:
-    python-version: [3.8,3.9]
+  
 
     
   
