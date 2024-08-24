@@ -5,10 +5,10 @@ on:
   branches: [ "main" ]
 
 jobs:
- build:
-  runs-on: ubuntu-latest
-  steps:
-   - run: my_script.sh
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./my_script.sh
 
   
 
