@@ -10,10 +10,10 @@ jobs:
   steps:
   - uses: actions/checkout@v4
   - name: provide permission to file
-    working-directory: /examples/src
+    working-directory: examples/src
     run: chmod +x my_script.sh
   - name: execute shell script
-    working-directory: /examples/src
+    working-directory: examples/src
     run: ./my_script.sh
 
     
